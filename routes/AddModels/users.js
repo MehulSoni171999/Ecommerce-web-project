@@ -8,10 +8,7 @@ const userSchema=mongoose.Schema({
     username:String,
     email:String,
     password:String,
-    profilePic:{
-        type:String,
-        default:'def.jpg'
-       }
+    
 })
 
 userSchema.plugin(plm);
