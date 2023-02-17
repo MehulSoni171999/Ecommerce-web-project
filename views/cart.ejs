@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main{
+        width: 80vw;
+        height: 28vh;
+        background-color: rgb(219, 201, 201);
+        display: flex;
+        justify-content: space-around;
+    }
+.cardimg{
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 20vw;
+    height: 22vh;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.details{
+    width: 35vw;
+    height: 18vh;
+
+}
+
+</style>
+<body>
+    
+    <div id="main">
+        
+                  <div class="cardimg"><img src="/<%= allcartdata.image%>" alt=""></div>
+                  <br>
+<div class="details">
+    
+                  <h1>id-<%=allcartdata.id%></h1>
+                  <h2>name- <%=allcartdata.name%></h2>
+                    <h4>price- <%=allcartdata.price%>/only</h4>
+                 <h4>total- <%=allcartdata.total%>/-</h4>
+<a href="/allcart">view all carts</a>
+</div>
+
+ 
+                <!-- <div class="itembtn"><button type="submit" id="btn-3" class="btn btn-warning">add to cart</button></div> -->
+                 <!-- <button type="submit" class="btn btn-warning">add cart</button></div>  -->
+           
+                </div>
+            
+                
+     
+            </div>
+  </div>
+    
+
+
+</body>
+</html>

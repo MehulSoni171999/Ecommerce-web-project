@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        #main{
+        width: 80vw;
+        height: 28vh;
+        background-color: rgb(219, 201, 201);
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2.5%;
+        border-radius: 8px;
+    }
+.cardimg{
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 20vw;
+    height: 22vh;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.details{
+    width: 35vw;
+    height: 18vh;
+
+}
+.cartshed{
+    position: absolute;
+    display: flex;
+    width: 50vw;
+    height: 5vh;
+    background-color: rgba(215, 240, 240, 0.904);
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.maincart{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+</style>
+<body>
+          
+<div class="maincart">
+     <div class="cartshed"><h2>your all saved carts are here</h2></div> 
+
+    <% allcart.forEach(function(cart){ %>
+
+        <form action="/empty-cart/<%=cart.id %>" method="get">
+        <div id="main">
+        
+            <div class="cardimg"><img src="/<%= cart.image%>" alt=""></div>
+            <br>
+
+    <div class="details">
+    
+        <h1>id-<%=cart.id%></h1>
+        <h2>name- <%=cart.name%></h2>
+          <h4>price- <%=cart.price%>/only</h4>
+       <h4>total- <%=cart.total%>/-</h4>
+</div>
+</div>
+ </form>
+
+<% }) %> </div>
+
+   
+</body>
+</html>
